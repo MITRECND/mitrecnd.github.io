@@ -1,0 +1,31 @@
+---
+layout: default-data
+title: Active Defense Tactics
+custom_css: default
+breadcrumb: Tactics
+---
+
+<!-- Start Content -->
+<h1>{{ page.title }}</h1>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+      <p>
+        Tactics describe the desired effect of active defense activities and are useful to describe why a defender would choose to use a specific active defense technique. These tactics serve as useful ways to classify individual defensive techniques.
+      </p>
+    </div>
+</div>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr><th>ID</th><th>Name</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        {%- for tactic in site.data.tactics -%}
+            <tr>
+                <td><a href="{{ site.baseurl }}/tactics/{{ tactic.id }}">{{ tactic.id }}</a></td>
+                <td>{{ tactic.name }}</td>
+                <td>{{ tactic.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+<!-- End Content -->

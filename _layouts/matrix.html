@@ -1,0 +1,41 @@
+{%- include header.html -%}
+{%- include nav.html -%}
+{%- include side_nav.html -%}
+{%- include breadcrumb.html -%}
+<!-- Start Content -->
+<h1>{{ page.title }}</h1>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-10">
+    {{ content }}
+  </div>
+</div>
+<div class="ml-5 pr-5 pt-3">
+  <div class="overflow-x-auto">
+    <table class="table table-bordered table-hover">
+      {%- for row in site.data.tactic_matrix -%}
+        {%- if forloop.index == 1 -%}
+          <thead>
+          {%- for h in row -%}
+            <th><a href="{{ site.baseurl }}/tactics/{{h[0]}}" class="matrix-tactics-url">{{ h[1] }}</a></th>
+          {%- endfor -%}
+          </thead>
+          <tbody>
+        {%- else -%}
+          <tr>
+            {%- for t in row -%}
+              {%- if t != nil -%}
+                <td><a href="{{ site.baseurl }}/techniques/{{t.id}}">{{ t.name }}</a></td>
+              {%- else -%}
+                <td></td>
+              {%- endif -%}
+            {%- endfor -%}
+          </tr>
+        {%- endif -%}
+      {%- endfor -%}
+      </tbody>
+    </table>
+    </div>
+</div>
+<!-- End Content -->
+
+{%- include footer.html -%}

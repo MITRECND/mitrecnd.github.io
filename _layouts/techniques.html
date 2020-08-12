@@ -1,0 +1,91 @@
+---
+title: page._name
+---
+{%- include header.html -%}
+{%- include nav.html -%}
+{%- include side_nav.html -%}
+{%- include breadcrumb.html -%}
+<!-- Start Content -->
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+        <h1>{{ page._name }}</h1>
+        <p>
+            {{ page.description }}
+            <br />
+            <br />
+            {{ page.long_description }}
+        </p>
+    </div>
+    {%- include detail_card.html -%}
+</div>
+<h2>Opportunities</h2>
+<table class="table table-bordered table-hover">
+    <thead></thead><tr><th>ID</th><th>Description</th></tr></thead>
+    <tbody>
+        {%- for opportunity in site.data.technique_details[page._id].opportunities -%}
+            <tr>
+                <td>{{ opportunity.id }}</td>
+                <td>{{ opportunity.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+<br>
+<h2>Use Cases</h2>
+<table class="table table-bordered table-hover">
+    <thead></thead><tr><th>ID</th><th>Description</th></tr></thead>
+    <tbody>
+        {%- for use_case in site.data.technique_details[page._id].use_cases -%}
+            <tr>
+                <td>{{ use_case.id }}</td>
+                <td>{{ use_case.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+<br>
+<h2>Procedures</h2>
+<table class="table table-bordered table-hover">
+    <thead></thead><tr><th>ID</th><th>Description</th></tr></thead>
+    <tbody>
+        {%- for procedure in site.data.technique_details[page._id].procedures -%}
+            <tr>
+                <td>{{ procedure.id }}</td>
+                <td>{{ procedure.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+<br>
+<h2>ATT&CK&#174 Techniques</h2>
+<table class="table table-bordered table-hover">
+    <thead></thead><tr><th>ID<img class="external-icon" src="{{ site.baseurl }}/assets/img/external_link.png"/></th><th>Name</th><th>ATT&CK Tactics</th></tr></thead>
+    <tbody>
+        {%- for attack_technique in site.data.technique_details[page._id].attack_techniques -%}
+            <tr>
+                <td>
+                    <a href="https://attack.mitre.org/techniques/{{ attack_technique.id }}">{{ attack_technique.id }}</a>
+                </td>
+                <td>{{ attack_technique.name }}</td>
+                <td>
+                    {%- for attack_tactic in attack_technique.attack_tactics -%}
+                        {%- for tactic in site.data.technique_details[page._id].attack_tactics -%}
+                        {%- assign tactic_low = tactic.name | downcase | replace: " ", "-" -%}
+                        {%- assign attack_tactic_low = attack_tactic | downcase | replace: " ", "-" -%}
+                        {%- if tactic_low == attack_tactic_low -%}
+                            <a href="{{ site.baseurl }}/attack_mapping/{{ tactic.id }}">{{ tactic.name }}</a>
+                        {%- endif -%}
+                        {%- endfor -%}
+                        {%- if forloop.last == false -%}
+                        ,&nbsp;
+                        {%- endif -%}
+                    {%- endfor -%}
+                </td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+{{ content }}
+<!-- End Content -->
+
+{%- include footer.html -%}

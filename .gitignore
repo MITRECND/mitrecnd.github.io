@@ -1,0 +1,14 @@
+.vscode/
+.idea/
+.DS_Store
+_site/
+.sass-cache
+.jekyll-metadata
+.csv
+env
+__pycache__/
+modules/__pycache__/*
+attack-versions/
+output/
+reports/
+Gemfile.lock

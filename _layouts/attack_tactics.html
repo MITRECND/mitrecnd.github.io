@@ -1,0 +1,57 @@
+---
+title: {{ page._name }}
+---
+{%- include header.html -%}
+{%- include nav.html -%}
+{%- include side_nav.html -%}
+{%- include breadcrumb.html -%}
+<!-- Start Content -->
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <h1>Mapping To {{ page._name }}</h1>
+    <p>
+      {%- if page.description -%}
+      {{ page.description }}
+      <br />
+      <br />
+      {%- endif -%}
+      {%- if page.long_description -%}
+      {{ page.long_description }}
+      {%- else -%}
+      For a given ATT&CK&#174 tactic, the table shows the adversary techniques that are used, the active defense
+      opportunities that are created, the active defense techniques that can then be applied, and use cases to
+      illustrate possible applications.
+      {%- endif -%}
+    </p>
+  </div>
+  {%- include detail_card.html -%}
+</div>
+<table class="table table-bordered table-hover">
+  <thead>
+    <th>ATT&amp;CK Technique<img class="external-icon" src="{{ site.baseurl }}/assets/img/external_link.png" /></th>
+    <th>Opportunity Space</th>
+    <th>AD Technique</th>
+    <th>Use Case</th>
+  </thead>
+  <tbody>
+    {%- for row in site.data.attack_mapping -%}
+    {%- for attack_tactic in row['attack_tactics'] -%}
+    {%- if attack_tactic.id == page._id -%}
+    <tr>
+      <td><a href="https://attack.mitre.org/techniques/{{ row.attack_technique.id }}">{{ row.attack_technique.id }} -
+          {{ row.attack_technique.name }}</a></td>
+      <td>{{ row.opportunity.description }}</td>
+      <td>
+        <a href="{{ site.baseurl }}/techniques/{{row.technique.id}}">{{row.technique.id}} - {{ row.technique.name }}</a>
+      </td>
+      <td>{{ row.use_case.description }}</td>
+    </tr>
+
+    {%- endif -%}
+    {%- endfor -%}
+    {%- endfor -%}
+  </tbody>
+</table>
+<!-- End Content -->
+
+{%- include footer.html -%}

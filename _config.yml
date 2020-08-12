@@ -1,0 +1,88 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Shield
+email: shield@mitre.org
+description: >- # this means to ignore newlines until "baseurl:"
+  Sheild Active Defense KB
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://shield.mitre.org" # the base hostname & protocol for your site, e.g. http://example.com
+
+search_index: "/index.json"
+
+# If set, banner will show a colored message box under the navbar.
+# To set colors, set banner_type to:
+# alert-danger: red
+# alert-warning: orange
+# alert-success: green
+# alert-info: gray
+# alert-primary: primary site color
+# alert-secondary: light gray
+# alert-light: white
+# banner: "Banner text"
+# banner_type: "banner-color"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# theme: minima
+plugins_dir:
+  - jekyll-feed
+collections_dir: _collections
+collections:
+  ad_tactics:
+    output: true
+    permalink: /tactics/:path/
+  ad_techniques:
+    output: true
+    permalink: /techniques/:path/
+  attack_mapping:
+    output: true
+    permalink: /attack_mapping/:path/
+defaults:
+  - scope:
+      path: ""
+      type: "ad_tactics"
+    values:
+      layout: "tactics"
+  - scope:
+      path: ""
+      type: "ad_techniques"
+    values:
+      layout: "techniques"
+  - scope:
+      path: ""
+      type: "attack_mapping"
+    values:
+      layout: "attack_tactics"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+# customer excludes
+  - contribute.md
+  - README.md
+

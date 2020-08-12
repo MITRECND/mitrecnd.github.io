@@ -1,0 +1,37 @@
+---
+
+layout: default-data
+title: ATT&CK&#174 Mapping
+custom_css: default
+breadcrumb: ATT&CK&#174 Mapping
+
+---
+<h1>Complete ATT&CK&#174 Mapping</h1>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <p>
+        The table below shows the mapping of ATT&CK&#174 Techniques from all ATT&CK&#174
+        Tactics to Active Defense Opportunities, Techniques, and Use Cases.
+    </p>
+  </div>
+</div>
+<table class="table table-bordered table-hover">
+    <thead>
+        <th>ATT&amp;CK Technique<img class="external-icon" src="{{ site.baseurl }}/assets/img/external_link.png"/></th>
+        <th>Opportunity Space</th>
+        <th>AD Technique</th>
+        <th>Use Case</th>
+    </thead>
+    <tbody>
+{%- for row in site.data.attack_mapping -%}
+    <tr>
+        <td><a href="https://attack.mitre.org/techniques/{{ row.attack_technique.id }}">{{ row.attack_technique.id }} - {{ row.attack_technique.name }}</a></td>
+        <td>{{ row.opportunity.description }}</td>
+        <td>
+            <a href="{{ site.baseurl }}/techniques/{{row.technique.id}}">{{row.technique.id}} - {{ row.technique.name }}</a>
+        </td>
+        <td>{{ row.use_case.description }}</td>
+    </tr>
+{%- endfor -%}
+</tbody>
+</table>

@@ -1,0 +1,34 @@
+{%- include header.html -%}
+{%- include nav.html -%}
+{%- include side_nav.html -%}
+{%- include breadcrumb.html -%}
+<!-- Start Content -->
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+        <h1>{{ page._name }}</h1>
+        <p>
+          {{ page.description }}
+          <br />
+          <br />
+          {{ page.long_description }}
+        </p>
+    </div>
+    {%- include detail_card.html -%}
+</div>
+<h2>Techniques</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr><th>Technique</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        {%- for technique in site.data.tactic_details[page._id].techniques -%}
+            <tr>
+                <td><a href="{{ site.baseurl }}/techniques/{{technique.id}}">{{ technique.id }} - {{ technique.name }}</a></td>
+                <td>{{ technique.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+<!-- End Content -->
+
+{%- include footer.html -%}

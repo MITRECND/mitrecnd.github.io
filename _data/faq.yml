@@ -1,0 +1,15 @@
+questions:
+ - category: General
+   questions:
+    - question: "Why is the knowledge base named Shield?"
+      answer: "Shield is a verb meaning to protect from a danger or risk, as well as a noun, meaning one that protects or defends. Like the word, our Shield knowledge base can be used in a variety of ways depending on a defender’s exact need."
+    - question: "What was the motivation behind the creation of Shield?"
+      answer: "This project began as the team documented techniques that could be useful in adversary engagement operations.  MITRE has a rich history of work in cyber deception and adversary engagement so for the team, creating this knowledge base was a natural progression."
+    - question: "Shield seems geared towards deception and adversary engagement, but also includes some basic defense techniques.  Why is that?"
+      answer: "To be successful at deception and adversary engagement, you must use basic cyber defense techniques like collecting system and network logs, PCAP, performing data backups, etc."
+    - question: "What is the difference between an \"Opportunity Space\" and a \"Use Case\" in the active defense knowledge base?"
+      answer: "Opportunity Spaces are high-level active defense posibilities when attackers employ their techniques, while Use Cases are high-level descriptions of how a defender could do something to take advantage of the opportunity that the attackers action presents."
+    - question: "Have you considered other methods of presenting the Shield data such as creating an ATT&CK Navigator layer?"
+      answer: "We see the possibility of a future enhancement in this area. If you would find this to be useful or would like to contribute to this effort, please contact us."
+    - question: "How can I programmatically work with your data and/or see how the site is generated?"
+      answer: 'All of the data used to generate this website can be found on <a href="https://github.com/MITRECND/mitrecnd.github.io">our GitHub repo</a>. The JSON data specifically can be found in the <a href="https://github.com/MITRECND/mitrecnd.github.io/blob/master/_data/">_data folder</a>.'

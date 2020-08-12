@@ -1,1 +1,38 @@
-Coming Soon
+---
+
+layout: default
+title: Home
+custom_css: default
+
+---
+## What's Shield?
+
+Shield is an active defense knowledge base MITRE is developing to capture and organize what we are learning about active defense and adversary engagement.  Derived from over 10 years of adversary engagement experience, it spans the range from high level, CISO ready considerations of opportunities and objectives, to practitioner friendly discussions of the TTPs available to defenders. 
+
+We are developing this knowledge base as both unstructured (think writings like blogs and papers) and structured (think tables of things, related to each other with links) data.  Our first release (see more below) focuses on the structured elements.  Working with the data can be awkward, so our presentation here is in the form of a couple of organizing views or "mappings", including a mapping between MITRE ATT&CK® and Shield.  We foresee additional views into the knowledge base we are developing.
+
+Shield is very much a work in progress; it is being released now not because it is complete, but because we think it is ready enough to stimulate conversations about active defense, adversary engagement, and the ways defenders can use them to change the game.
+
+
+## What’s New?
+
+Well, everything here is new!  
+
+To begin with, you will find several different views into the Shield knowledge base. Across the top, dropdown menus are available to access the site’s information quickly and easily. More details about these views are detailed separately.
+
+One way we are using Shield is to tie ATT&CK techniques describing post-compromise adversary behavior to relevant Shield defensive techniques. We are excited to share this mapping of [ATT&CK to Shield]({{ site.baseurl }}/attack_mapping/).
+
+## What’s Next?
+
+First and foremost, we are hoping for conversation.  Our work is in service of a safer world, and we are interested in talking to others that think active defense and adversary engagement might be useful paths to that goal.  
+
+For the knowledge base, we have already seen opportunities in tweaking our data model, that is next, and we hope to share it in the 4th quarter of 2020.  As we continue to work with opportunity spaces, use cases, and procedures we see a natural progression to develop a playbook. 
+
+Of course, there will be additional knowledge base content.  For the record, this will likely never be close to finished; the subject area is nearly infinite and limited more by imagination than anything.  We do hope to analyze the coverage we are giving the landscape and ensure that we are including at least a bit of every type of thing that needs exposure. 
+
+## How Do I Contribute?
+
+We are very interested in feedback and suggestions. If you have information you think may be useful, please reach us at Shield@mitre.org.
+
+
+

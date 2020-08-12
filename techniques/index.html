@@ -1,0 +1,29 @@
+---
+layout: default-data
+title: Active Defense Techniques
+custom_css: default
+breadcrumb: Techniques
+---
+
+<!-- Start Content -->
+<h1>{{ page.title }}</h1>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+        <p>
+Techniques describes things that can be done (by defenders) in active defense. The detail page for each technique will provide information about which tactics it supports, what opportunities are available based on adversary TTPs, as well as use cases and procedures to prompt implementation discussions.
+        </p>
+    </div>
+</div>
+<table class="table table-bordered table-hover">
+    <thead></thead><tr><th>ID</th><th>Name</th><th>Description</th></tr></thead>
+    <tbody>
+        {%- for technique in site.data.techniques -%}
+            <tr>
+                <td><a href="{{ site.baseurl }}/techniques/{{ technique.id }}">{{ technique.id }}</a></td>
+                <td>{{ technique.name }}</td>
+                <td>{{ technique.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
+<!-- End Content -->
