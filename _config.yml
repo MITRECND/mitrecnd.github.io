@@ -16,7 +16,7 @@
 title: Shield
 email: shield@mitre.org
 description: >- # this means to ignore newlines until "baseurl:"
-  Shild Active Defense KB
+  Shield Active Defense KB
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
