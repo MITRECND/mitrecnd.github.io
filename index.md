@@ -1,7 +1,7 @@
 ---
 
 layout: default
-title: Home
+title: Shield Home
 custom_css: default
 
 ---
