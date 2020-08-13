@@ -1,42 +1,39 @@
 <!-- Start Detail Card -->
-<div class="col-xs-6 col-md-4">
-    <div class="card border-info mb-3 float-right" style="max-width: 40rem;">
+<div class="col-sm-4 col-xs-12 pt-2">
+    <div class="card">
         <div class="card-header">Details</div>
-        <div class="card-body no-padding">
-            <table class="table table-hover table-borderless no-margin">
-                <tr>
-                    {%- if page.layout == "attack_tactics" -%}
-                    <td>
-                        <p class="card-text"><b>ATT&CK&#174 ID:</b></p>
-                    </td>
-                    <td>
-                        <p class="card-text"><a href="https://attack.mitre.org/tactics/{{ page._id }}">{{ page._id }}</a></p>
-                    </td>
-                    {%- else -%}
-                    <td>
-                        <p class="card-text"><b>ID:</b></p>
-                    </td>
-                    <td>
-                        <p class="card-text">{{ page._id }}</p>
-                    </td>
-                    {%- endif -%}
-                </tr>
-                {%- if page.layout == "techniques"" -%}
-                <tr>
-                    <td>
-                        <p class="card-text"><b>Tactics</b></p>
-                    </td>
-                    <td>
+        <div class="card-body container">
+            <div class="row">
+            {%- if page.layout == "attack_tactics" -%}
+                <div class="card-data col-sm-12" id="card-id">
+                    <span class="font-weight-bold card-title card-value">ATT&CK ID:</span>
+                    <span class="card-value">
+                        <a href="https://attack.mitre.org/tactics/{{ page._id }}">{{ page._id }}</a>
+                    </span>
+                </div>
+            {%- else -%}
+                <div class="card-data col-sm-12" id="card-id">
+                    <span class="font-weight-bold card-title card-value">ID:</span>
+                    <span class="card-value">{{ page._id }}</span>
+                </div>
+            {%- endif -%}
+            </div>
+            <div class="row">
+            {%- if page.layout == "techniques"" -%}
+                <div class="card-data col-sm-12" id="card-tactics">
+                    <span class="font-weight-bold card-title">Tactics:&nbsp;</span>
                     {%- for tactic in site.data.technique_details[page._id].tactics -%}
-                        <a href="{{ site.baseurl }}/tactics/{{ tactic.id }}">{{ tactic.name }}</a>
+                        <span class="card-value">
+                            <a href="{{ site.baseurl }}/tactics/{{ tactic.id }}">{{ tactic.name }}</a>
                         {%- if forloop.last == false -%}
-                         ,&nbsp;
+                        ,&nbsp;
                         {%- endif -%}
+                        </span>
                     {%- endfor -%}
-                    </td>
-                {%- endif -%}
-                </tr>
-            </table>
+                    </span>
+                </div>
+            {%- endif -%}
+            </div>
         </div>
     </div>
 </div>

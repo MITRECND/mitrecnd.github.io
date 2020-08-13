@@ -319,6 +319,10 @@ pre {
   margin-bottom: 0.5rem;
 }
 
+.card-value {
+  display: inline-block;
+}
+
 .card-header {
   color: #39434C;
   background: rgba(57, 67, 76, 0.03);
