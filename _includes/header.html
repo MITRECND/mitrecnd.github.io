@@ -16,6 +16,9 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-glyphicon.min.css" />
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.min.css?a6820e0c">
+        {% if site.google_analytics and jekyll.environment == 'production' %}
+        {% include analytics.html %}
+        {% endif %}
 </head>
 <!-- End Page Head-->
 <!-- Start Body -->
