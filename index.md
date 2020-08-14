@@ -13,7 +13,7 @@ We are developing this knowledge base as both unstructured (think writings like 
 
 Shield is very much a work in progress; it is being released now not because it is complete, but because we think it is ready enough to stimulate conversations about active defense, adversary engagement, and the ways defenders can use them to change the game.
 
-## What's active defense?
+## What's Active Defense?
 
 The U.S.Department of Defense defines active defense as "The employment of limited offensive action and counterattacks to deny a contested area or position to the enemy."<sup>[1](https://www.jcs.mil/Portals/36/Documents/Doctrine/pubs/dictionary.pdf?ver=2020-06-18-073638-727)</sup> Active defense ranges from basic cyber defensive capabilities to cyber deception and adversary engagement operations.  The combination of these defenses allows an organization to not only counter current attacks but also to learn more about that adversary and better prepare for new attacks in the future.
 
