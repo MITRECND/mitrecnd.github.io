@@ -7,6 +7,7 @@ custom_css: default
 ---
 ## Papers
 - [Introduction Paper]({{ site.baseurl }}/resources/downloads/Introduction_to_MITRE_Shield.pdf): This whitepaper provides an introduction to MITRE Shield and how it relates to MITRE ATT&CK.
+- [Getting Started with MITRE Shield]({{ site.baseurl }}/resources/downloads/Getting_Started_with_MITRE_Shield.pdf): This paper gives defenders examples of how MITRE Shield can be leveraged.  The examples start simple and build to show more complex solutions.
 
 ## About Shield’s structure and terminology
 
