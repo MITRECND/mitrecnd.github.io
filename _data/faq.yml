@@ -8,7 +8,7 @@ questions:
     - question: "Shield seems geared towards deception and adversary engagement, but also includes some basic defense techniques.  Why is that?"
       answer: "To be successful at deception and adversary engagement, you must use basic cyber defense techniques like collecting system and network logs, PCAP, performing data backups, etc."
     - question: "What is the difference between an \"Opportunity Space\" and a \"Use Case\" in the active defense knowledge base?"
-      answer: "Opportunity Spaces are high-level active defense posibilities when attackers employ their techniques, while Use Cases are high-level descriptions of how a defender could do something to take advantage of the opportunity that the attackers action presents."
+      answer: "Opportunity Spaces are high-level active defense possibilities when attackers employ their techniques, while Use Cases are high-level descriptions of how a defender could do something to take advantage of the opportunity that the attacker's action presents."
     - question: "Have you considered other methods of presenting the Shield data such as creating an ATT&CK Navigator layer?"
       answer: "We see the possibility of a future enhancement in this area. If you would find this to be useful or would like to contribute to this effort, please contact us."
     - question: "How can I programmatically work with your data and/or see how the site is generated?"
