@@ -35,7 +35,7 @@ search_index: "/index.json"
 # alert-light: white
 # banner: "Banner text"
 # banner_type: "banner-color"
-banner: "The <a href=https://shield.mitre.org/resources/downloads/Getting_Started_with_MITRE_Shield.pdf>Getting Started with Shield</a> guide has been posted! Check it out on the <a href=https://shield.mitre.org/resources/getting-started>Getting Started</a> page under Papers."
+banner: "We have a blog! Check out <a href=https://medium.com/mitre-shield>MITRE Shield</a> on Medium."
 banner_type: "alert-success"
 
 # Build settings
