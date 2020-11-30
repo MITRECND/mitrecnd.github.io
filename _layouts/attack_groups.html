@@ -1,0 +1,69 @@
+---
+title: {{ page._name }}
+---
+{%- include header.html -%}
+{%- include nav.html -%}
+{%- include side_nav.html -%}
+{%- include breadcrumb.html -%}
+<!-- Start Content -->
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-8">
+    <h1>Mapping To {{ page._name }}</h1>
+    <p>
+      {%- if page.description -%}
+      {{ page.description }}
+      <br />
+      <br />
+      {%- endif -%}
+      {%- if page.long_description -%}
+      {{ page.long_description }}
+      {%- endif -%}
+      <br />
+      <b>Disclaimer:</b>  We present this mapping to stimulate thinking about active defense options to combat this adversary, not to present all possibilities. We invite you to use this as a guide and add your own use cases for applying Shield techniques to counter each adversary action.
+      <br /><br /><b>Note:</b>  All ATT&CK Group sub-technique mappings have been remapped to their parent technique and were derived from Group Technique mappings in ATT&CK v8.
+    </p>
+  </div>
+  {%- include detail_card.html -%}
+</div>
+<table class="table table-bordered table-hover">
+  <thead>
+    <th>ATT&amp;CK Technique<img class="external-icon" src="{{ site.baseurl }}/assets/img/external_link.png" /></th>
+    <th>Opportunity Space</th>
+    <th>AD Technique</th>
+    <th>Use Case</th>
+  </thead>
+  <tbody>
+    {%- for groups in site.data.attack_groups -%}
+      {%- if groups.id == page._id -%}
+        {%- assign group = groups -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign has_rows = 0 -%}
+    {%- for row in site.data.attack_mapping -%}
+      {%- for tech in group.techniques -%}
+        {%- if row.attack_technique.name == tech.technique_name -%}
+          {%- assign has_rows = 1 -%}
+          <tr>
+            <td><a href="https://attack.mitre.org/techniques/{{ row.attack_technique.id }}">{{ row.attack_technique.id }} -
+                {{ row.attack_technique.name }}</a></td>
+            <td>{{ row.opportunity.description }}</td>
+            <td>
+              <a href="{{ site.baseurl }}/techniques/{{row.technique.id}}">{{row.technique.id}} - {{ row.technique.name }}</a>
+            </td>
+            <td>{{ row.use_case.description }}</td>
+          </tr>
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  </tbody>
+</table>
+{%- if has_rows != 1 -%}
+<p>
+  Stay tuned for more mappings with this adversary. As Techniques are added to the MITRE ATT&CK group page for this adversary we will look to add content here as well.
+</p>
+{%- endif -%}
+<!-- End Content -->
+
+{%- include footer.html -%}

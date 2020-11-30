@@ -11,6 +11,13 @@
                         <a href="https://attack.mitre.org/tactics/{{ page._id }}">{{ page._id }}</a>
                     </span>
                 </div>
+            {%- elsif page.layout == "attack_groups" -%}
+                <div class="card-data col-sm-12" id="card-id">
+                    <span class="font-weight-bold card-title card-value">ATT&CK ID:</span>
+                    <span class="card-value">
+                        <a href="https://attack.mitre.org/groups/{{ page._id }}">{{ page._id }}</a>
+                    </span>
+                </div>
             {%- else -%}
                 <div class="card-data col-sm-12" id="card-id">
                     <span class="font-weight-bold card-title card-value">ID:</span>
@@ -19,7 +26,18 @@
             {%- endif -%}
             </div>
             <div class="row">
-            {%- if page.layout == "techniques"" -%}
+            {%- if page.layout == "attack_groups" -%}
+                <div class="card-data col-sm-12" id="card-groups">
+                    <span class="font-weight-bold card-title">Associated Groups:&nbsp;</span>
+                    <span class="card-value">{{ page.aliases }}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-data col-sm-12" id="card-note">
+                    <span class="font-weight-bold card-title">Note:&nbsp;</span>
+                    <span class="card-value">This page uses Adversary Group data from MITRE ATT&CK.</span>
+                </div>
+            {%- elsif page.layout == "techniques"" -%}
                 <div class="card-data col-sm-12" id="card-tactics">
                     <span class="font-weight-bold card-title">Tactics:&nbsp;</span>
                     {%- for tactic in site.data.technique_details[page._id].tactics -%}
