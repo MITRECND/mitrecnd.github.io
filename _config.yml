@@ -55,6 +55,9 @@ collections:
   attack_mapping:
     output: true
     permalink: /attack_mapping/:path/
+  attack_groups:
+    output: true
+    permalink: /attack_groups/:path/
 defaults:
   - scope:
       path: ""
@@ -71,6 +74,11 @@ defaults:
       type: "attack_mapping"
     values:
       layout: "attack_tactics"
+  - scope:
+      path: ""
+      type: "attack_groups"
+    values:
+      layout: "attack_groups"
   - scope:
       path: ""
       type: "pages"

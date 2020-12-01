@@ -1,0 +1,32 @@
+---
+
+layout: default-data
+title: Groups Overview
+custom_css: default
+breadcrumb: ATT&CK Groups Overview
+
+---
+
+<h1>ATT&CK Groups Overview</h1>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-8">
+    <p>
+        The following table provides a list of ATT&CK Groups. Each one links to a details page to show the ATT&CK Mapping entires that apply to that specific group.
+    </p>
+  </div>
+</div>
+<h3>ATT&CK Groups</h1>
+<table class="table table-bordered table-hover">
+    <thead>
+        <th>ATT&amp;CK Group</th>
+        <th>Description</th>
+    </thead>
+    <tbody>
+        {%- for group in site.data.attack_groups -%}
+            <tr>
+                <td><a href="{{ site.baseurl }}/attack_groups/{{ group.id }}">{{ group.name }}</a></td>
+                <td>{{ group.description }}</td>
+            </tr>
+        {%- endfor -%}
+    </tbody>
+</table>
