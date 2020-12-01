@@ -22,6 +22,7 @@ The U.S. Department of Defense defines active defense as "The employment of limi
 Adversary Group mappings have been added to MITRE Shield! Group mappings are based on information found in MITRE ATT&CK. This new information can be accessed via the ATT&CK Mapping menu or directly using [this link]({{ site.baseurl }}/attack_groups/).
 
 In addition, we now include coverage for recently added ATT&CK Tactics Reconnaissance and Resource Development and many of their corresponding techniques.
+
 Last, but not least, you can track all these changes using our new [Updates]({{ site.baseurl }}/resources/updates) page. 
 
 ## What’s Next?
