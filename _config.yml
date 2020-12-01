@@ -35,7 +35,7 @@ search_index: "/index.json"
 # alert-light: white
 # banner: "Banner text"
 # banner_type: "banner-color"
-banner: "We have a blog! Check out <a href=https://medium.com/mitre-shield>MITRE Shield</a> on Medium."
+banner: "We've added <a href="https://medium.com/mitre-shield/introducing-mitre-shield-adversary-group-mappings-b1e095381dae">Adversary Group Mappings</a>!"
 banner_type: "alert-success"
 
 # Build settings
