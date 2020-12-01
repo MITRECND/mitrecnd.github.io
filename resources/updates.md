@@ -1,11 +1,11 @@
 ---
 
 layout: default
-title: Change Log
+title: Updates
 custom_css: default
 
 ---
-## 2020-12
+## 2020-12-01
 
 MITRE Shield was updated to use MITRE ATT&CK v8. This includes:
 
