@@ -2,6 +2,12 @@
 <html lang="en">
 <!-- Start Page Head -->
 <head>
+        {% if jekyll.environment == 'production' %}
+        <meta charset="utf-8">
+        <title>Redirecting to engage.mitre.org/</title>
+        <meta http-equiv="refresh" content="0; URL=https://engage.mitre.org/">
+        <link rel="canonical" href="https://engage.mitre.org/">
+        {% else %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +22,6 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-glyphicon.min.css" />
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.min.css?a6820e0c">
-        {% if site.google_analytics and jekyll.environment == 'production' %}
-        {% include analytics.html %}
         {% endif %}
 </head>
 <!-- End Page Head-->
